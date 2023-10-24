@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+header{
+    display: flex;
+    background-color: rgba(192, 196, 200, 0.738);
+}
+nav ul{list-style: none;
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    text-align: center;
+}
+nav a{text-decoration: none;
+     color: black;
+    font-family: 'Fuggles', cursive; ;
+    font-size: 1;
+}
+.logo{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 5px;
+}
+i{
+    margin-left: 10rem;
+}
+
+
+nav #togle {
+    display: none;
+}
+nav .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+nav #togle:checked~ .menu {
+    height: 100%;
+}
+.imagen{
+    width: 15rem;
+    height: 15rem;
+    border: solid 2px gray;
+    border-radius: 10% 0% 10% 0%;
+    margin-bottom: 1rem;
+    transition: transform .6s;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+}
+.seccion{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.imagen:hover{
+    transform: scale(1.2);
+}
+@media(min-width:460px){
+      nav #togle,
+      nav label {
+        display: none;
+
+      }
+      nav .menu {
+        overflow: visible;
+      }   
+      nav ul{
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      nav{
+        display: flex;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+     
+      header{ height: 6rem;}
+      nav a{
+        font-size: 3rem;
+        text-transform: lowercase;
+        color: blue;
+      }
+      .seccion{
+        margin-top: 3rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 3 rem;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .imagen{
+        width: 12rem;
+        height: 12rem;
+    }
+}
+@media(min-width:770px){
+    .imagen{
+        width: 17rem;
+        height: 17rem;
+    }
+}
